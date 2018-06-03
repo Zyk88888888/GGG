@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>请点击</button><br>
+    <button>请点击</button><br>
+    <button>请点击</button><br>
+    <button>请点击</button><br>
+    <button>请点击</button><br>
+    <button>请点击</button><br>
+    <button>请点击</button><br>
+    <button>请点击</button><br>
+    <button>请点击</button><br>
+    <button>请点击</button><br>
+
+
+    <script>
+        var btns = document.querySelectorAll('button');
+
+        for (var i = 0; i < btns.length; i++) {
+            // 注册事件
+
+            btns[i].onclick = function() {
+                // 在这里增加代码
+                // 循环所有的 按钮
+                for (var j = 0; j < btns.length; j++) {
+                    btns[j].innerHTML = '请点击';
+                }
+
+                // 需要修改当前 按钮的 文字
+                this.innerHTML = '被点击了';
+            };
+        }
+
+
+        // 实现有两种方案:
+        // 1> 暴力法: 在点击之前, 将所有的 按钮 都设置为 请点击
+        // 2> 使用一个变量记录点击的按钮
+    </script>
+</body>
+
+</html>
